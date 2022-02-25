@@ -1,0 +1,627 @@
+.secondButtonAlaska {
+    position: absolute;
+    /* background: #000; */
+    top: 6%;
+    left: 8%;
+    z-index: 100;
+    width: 17.5%;
+    height: 32%;
+}
+
+.secondButtonCanada {
+    position: absolute;
+    /* background: #000; */
+    top: 22%;
+    left: 43%;
+    z-index: 10;
+    width: 17.5%;
+    height: 10%;
+}
+
+.secondButtonHawaii {
+    position: absolute;
+    /* background: #000; */
+    bottom: 13.5%;
+    left: 14%;
+    z-index: 10;
+    width: 16.5%;
+    height: 10%;
+}
+
+.secondButtonPuerto {
+    position: absolute;
+    /* background: #000; */
+    bottom: 9%;
+    right: 6%;
+    z-index: 10;
+    width: 15.5%;
+    height: 10%;
+}
+
+.secondButtonWA {
+    position: absolute;
+    /* background: #000; */
+    top: 26%;
+    left: 31%;
+    z-index: 10;
+    width: 8%;
+    height: 7.5%;
+}
+
+.secondButtonOR {
+    position: absolute;
+    /* background: #000; */
+    top: 34%;
+    left: 30%;
+    z-index: 10;
+    width: 7.5%;
+    height: 9%;
+}
+
+.secondButtonNV {
+    position: absolute;
+    /* background: #00000085; */
+    top: 45%;
+    left: 33.5%;
+    z-index: 10;
+    width: 6%;
+    height: 12%;
+}
+
+.secondButtonCA {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 36%;
+    left: 30%;
+    z-index: 10;
+    width: 5%;
+    height: 13%;
+}
+
+.secondButtonID {
+    position: absolute;
+    /* background: #0009; */
+    top: 35%;
+    left: 37%;
+    z-index: 10;
+    width: 6%;
+    height: 10%;
+
+}
+
+.secondButtonUT {
+    position: absolute;
+    /* background: #0009; */
+    top: 47%;
+    left: 39%;
+    z-index: 10;
+    width: 5%;
+    height: 11%;
+
+}
+
+.secondButtonAZ {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 28.5%;
+    left: 37.5%;
+    z-index: 10;
+    width: 6%;
+    height: 13%;
+}
+
+.secondButtonMT {
+    position: absolute;
+    /* background: #0009; */
+    top: 29%;
+    left: 40.5%;
+    z-index: 10;
+    width: 10%;
+    height: 10%;
+}
+
+.secondButtonWY {
+    position: absolute;
+    /* background: #0009; */
+    top: 40%;
+    left: 43%;
+    z-index: 10;
+    width: 7%;
+    height: 10%;
+}
+
+.secondButtonCO {
+    position: absolute;
+    /* background: #0009; */
+    top: 50%;
+    left: 44.5%;
+    z-index: 10;
+    width: 7.3%;
+    height: 10%;
+}
+
+.secondButtonNM {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 27%;
+    left: 43.5%;
+    z-index: 10;
+    width: 7%;
+    height: 13%;
+}
+
+.secondButtonND {
+    position: absolute;
+    /* background: #0009; */
+    top: 31%;
+    left: 50.5%;
+    z-index: 10;
+    width: 7%;
+    height: 8%;
+
+}
+
+.secondButtonSD {
+    position: absolute;
+    /* background: #0009; */
+    top: 39%;
+    left: 50.5%;
+    z-index: 10;
+    width: 7%;
+    height: 7%;
+}
+
+.secondButtonNE {
+    position: absolute;
+    /* background: #0009; */
+    top: 46%;
+    left: 51%;
+    z-index: 10;
+    width: 7%;
+    height: 7%;
+}
+
+.secondButtonKS {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 39.5%;
+    left: 52%;
+    z-index: 10;
+    width: 7%;
+    height: 7%;
+}
+
+.secondButtonOK {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 32.5%;
+    left: 54%;
+    z-index: 10;
+    width: 5.5%;
+    height: 7%;
+}
+
+.secondButtonTX {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 19%;
+    left: 50%;
+    z-index: 10;
+    width: 10%;
+    height: 13%;
+}
+
+.secondButtonMN {
+    position: absolute;
+    /* background: #0009; */
+    top: 33%;
+    left: 57.5%;
+    z-index: 10;
+    width: 4.5%;
+    height: 12%;
+}
+
+.secondButtonIA {
+    position: absolute;
+    /* background: #0009; */
+    top: 45%;
+    left: 58.5%;
+    z-index: 10;
+    width: 4.5%;
+    height: 7%;
+}
+
+.secondButtonMO {
+    position: absolute;
+    /* background: #0009; */
+    top: 53%;
+    left: 59.6%;
+    z-index: 10;
+    width: 4%;
+    height: 8%;
+
+}
+
+.secondButtonAR {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 31%;
+    left: 60%;
+    z-index: 10;
+    width: 4.5%;
+    height: 7%;
+}
+
+.secondButtonLA {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 22%;
+    left: 61%;
+    z-index: 10;
+    width: 3%;
+    height: 8%;
+}
+
+.secondButtonWI {
+    position: absolute;
+    /* background: #0009; */
+    top: 37%;
+    right: 34%;
+    z-index: 10;
+    width: 4%;
+    height: 8%
+}
+
+.secondButtonIL {
+    position: absolute;
+    /* background: #0009; */
+    top: 47%;
+    right: 33%;
+    z-index: 10;
+    width: 3.5%;
+    height: 10%;
+}
+
+.secondButtonMS {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 26%;
+    right: 33%;
+    z-index: 10;
+    width: 3%;
+    height: 9%;
+
+}
+
+.secondButtonMI {
+    position: absolute;
+    /* background: #0009; */
+    top: 41%;
+    right: 29%;
+    z-index: 10;
+    width: 3%;
+    height: 7%;
+}
+
+.secondButtonIN {
+    position: absolute;
+    /* background: #0009; */
+    top: 49%;
+    right: 30%;
+    z-index: 10;
+    width: 3%;
+    height: 7%;
+}
+
+.secondButtonKY {
+    position: absolute;
+    /* background: #0009; */
+    top: 55%;
+    right: 27%;
+    z-index: 10;
+    width: 5%;
+    height: 5%;
+}
+
+.secondButtonTN {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 35.5%;
+    right: 28%;
+    z-index: 10;
+    width: 6%;
+    height: 4%;
+}
+
+.secondButtonAL {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 26%;
+    right: 29.5%;
+    z-index: 10;
+    width: 3.5%;
+    height: 8%;
+}
+
+.secondButtonOH {
+    position: absolute;
+    /* background: #0009; */
+    top: 48%;
+    right: 26.5%;
+    z-index: 10;
+    width: 3%;
+    height: 6%;
+}
+
+.secondButtonWV {
+    position: absolute;
+    /* background: #0009; */
+    top: 52.5%;
+    right: 24.4%;
+    z-index: 10;
+    width: 3%;
+    height: 5%;
+    border-radius: 50%;
+}
+
+.secondButtonGA {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 26%;
+    right: 25.7%;
+    z-index: 10;
+    width: 3%;
+    height: 8%;
+}
+
+.secondButtonPA {
+    position: absolute;
+    /* background: #0009; */
+    top: 46.5%;
+    right: 21.5%;
+    z-index: 10;
+    width: 4%;
+    height: 5%;
+}
+
+.secondButtonNY {
+    position: absolute;
+    /* background: #0009; */
+    top: 41%;
+    right: 19.5%;
+    z-index: 10;
+    width: 4%;
+    height: 5%;
+}
+
+.secondButtonVA {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 40.5%;
+    right: 20.5%;
+    z-index: 10;
+    width: 4%;
+    height: 5%;
+}
+
+.secondButtonNC {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 35%;
+    right: 21%;
+    z-index: 10;
+    width: 4%;
+    height: 5%;
+}
+
+.secondButtonSC {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 30%;
+    right: 23%;
+    z-index: 10;
+    width: 3%;
+    height: 5%;
+}
+
+.secondButtonFL {
+    position: absolute;
+    /* background: #0009; */
+    bottom: 14%;
+    right: 22.5%;
+    z-index: 10;
+    width: 3%;
+    height: 8%;
+}
+
+.secondButtonME {
+    position: absolute;
+     /*background: #00000073; */
+    top: 31.5%;
+    right: 13.5%;
+    z-index: 10;
+    width: 5%;
+    height: 6%;
+}
+
+
+
+.secondButtonNH {
+    position: absolute;
+   /*  background: #00000073; */
+    top: 36.5%;
+    right: 12%;
+    z-index: 10;
+    width: 4%;
+    height: 5.5%;
+}
+
+.secondButtonMA {
+    position: absolute;
+    /* background: #00000073; */
+    top: 41%;
+    right: 11.5%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+.secondButtonRI {
+    position: absolute;
+    /* background: #00000073; */
+    top: 43.5%;
+    right: 12%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+.secondButtonCT {
+    position: absolute;
+    /* background: #00000073; */
+    top: 46.5%;
+    right: 12%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+.secondButtonNJ {
+    position: absolute;
+    /* background: #00000073; */
+    bottom: 48%;
+    right: 14.5%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+.secondButtonDE {
+    position: absolute;
+    /* background: #00000073; */
+    bottom: 44.8%;
+    right: 14.5%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+.secondButtonMD {
+    position: absolute;
+    /* background: #00000073; */
+    bottom: 41.7%;
+    right: 14.5%;
+    z-index: 10;
+    width: 4%;
+    height: 4%;
+}
+
+
+
+.thirdButton18 {
+    position: absolute;
+    /* background: #000; */
+    top: 43%;
+    left: 28%;
+    z-index: 100;
+    width: 10%;
+    height: 24%;
+}
+
+.thirdButton25 {
+    position: absolute;
+    /* background: #000; */
+    top: 34%;
+    left: 42.5%;
+    z-index: 100;
+    width: 10%;
+    height: 24%;
+}
+
+.thirdButton35 {
+    position: absolute;
+    /* background: #000; */
+    top: 28%;
+    left: 52%;
+    z-index: 100;
+    width: 11%;
+    height: 27%;
+}
+
+.thirdButton45 {
+    position: absolute;
+    /* background: #000; */
+    top: 23%;
+    right: 25%;
+    z-index: 100;
+    width: 12%;
+    height: 27%;
+}
+
+.thirdButton65 {
+    position: absolute;
+    /* background: #000; */
+    top: 18%;
+    right: 4%;
+    z-index: 100;
+    width: 21%;
+    height: 43%;
+}
+
+.forthButtonViewUpperOlder {
+    position: absolute;
+    /* background: black; */
+    top: 47%;
+    left: 52%;
+    z-index: 100;
+    width: 8%;
+    height: 3%;
+}
+
+.forthButtonEmailUpperOlder {
+    position: absolute;
+    /* background: black; */
+    top: 51%;
+    left: 51.5%;
+    z-index: 100;
+    width: 10%;
+    height: 3%;
+}
+
+.forthButtonApplyUpperOlder {
+    position: absolute;
+    /* background: black; */
+    top: 49%;
+    left: 39.5%;
+    z-index: 100;
+    width: 11%;
+    height: 7%;
+}
+
+.finalStep {
+    position: absolute;
+    background: rgb(0 0 0 / .5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.finalStep img {
+    width: 100%;
+    max-width: 360px;
+    /* margin-top: 10%; */
+}
+
+.finalStep a {
+    display: block;
+    background: #121a40;
+    width: fit-content;
+    margin: 15px auto;
+    color: #fff;
+    padding: 10px 35px;
+}

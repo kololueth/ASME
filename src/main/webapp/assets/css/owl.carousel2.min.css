@@ -1,0 +1,63 @@
+unminify
+Free tool to unminify (unpack, deobfuscate) JavaScript, CSS, HTML, XML and JSON code, making it readable and pretty.
+
+
+ 
+1
+/**
+2
+ * Owl Carousel v2.3.4
+3
+ * Copyright 2013-2018 David Deutsch
+4
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+5
+ */
+6
+.owl-carousel,
+7
+.owl-carousel .owl-item {
+8
+    -webkit-tap-highlight-color: transparent;
+9
+    position: relative;
+10
+}
+11
+.owl-carousel {
+12
+    display: none;
+13
+    width: 100%;
+14
+    z-index: 1;
+15
+}
+16
+.owl-carousel .owl-stage {
+17
+    position: relative;
+18
+    -ms-touch-action: pan-Y;
+19
+    touch-action: manipulation;
+20
+    -moz-backface-visibility: hidden;
+21
+}
+22
+.owl-carousel .owl-stage:after {
+23
+    content: ".";
+24
+    display: block;
+25
+    clear: both;
+26
+    visibility: hidden;
+Unminify
+Tab size 
+4
+
+ 
+The tool works locally in your browser, no data is uploaded to the server.
