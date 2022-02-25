@@ -222,7 +222,6 @@ $(document).ready(function () {
 
 	 	if(regex.test(applicant.email)) {
 
-			// alert("passes email test");
 
 	 	} else {
 
@@ -237,11 +236,8 @@ $(document).ready(function () {
 
 	  var xhttp = new XMLHttpRequest();
 
-	  // xhttp.open("POST", "http://216.137.177.126:8080/ASME/email", true);
-
 	  xhttp.open("POST", "http://localhost:8080/ASME/email", true);
 
-	
 	  xhttp.setRequestHeader("Content-Type", "text/plain");
 
          // Event Handlers ///  
@@ -249,8 +245,6 @@ $(document).ready(function () {
 	  xhttp.onreadystatechange = function() {  // Success Response Action
 
 		if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-
-			//  alert("ready state is OK");
 
 
 			responseJSONObject = JSON.parse(this.responseText);
@@ -261,8 +255,6 @@ $(document).ready(function () {
 				if(responseJSONObject.status == "confirmed") {
 
 					alert("ASME Decision Life Guide sent to " + responseJSONObject.email);
-
-					// alert("File sent to " + responseJSONObject.email + "\n\n\r JSON Object shown below: \n\r" + JSON.stringify(responseJSONObject));
 
 				} else if(responseJSONObject.status == "error") {
 
