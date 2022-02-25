@@ -41,7 +41,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ASMEServlet extends HttpServlet {
 	
 	/**
-	 * status - body_content_processing_error = Issue with converting HTTP request body content to a String 
+	 * status - body_content_processing_error = Issue with converting HTTP request body content to a String... 
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -69,7 +69,7 @@ public class ASMEServlet extends HttpServlet {
 						+ "<meta charset=\"UTF-8\">"
 						+ "<title>ASME</title>"
 						+ "</head>"
-						+ "<body> SUCCESS <p>It didn't break!</p> "
+						+ "<body><br /><center>Hi!</center></p> "
 						+ "</body>"
 						+ "</html>");
 						
@@ -85,7 +85,7 @@ public class ASMEServlet extends HttpServlet {
 
 
 		response.setContentType("text/plain");
-		response.setHeader("Access-Control-Allow-Origin", "*");
+		// response.setHeader("Access-Control-Allow-Origin", "*");
 		
 		// Initialize response JSONObject
 		JSONObject responseJSON = new JSONObject();
@@ -107,9 +107,6 @@ public class ASMEServlet extends HttpServlet {
 			
 							String recipient = requestJSON.get("email").toString();    // Basic email format validation should be done by the requestor.  Assume valid email format but not a valid email address.
 			
-								System.out.println(recipient);
-								System.out.println(" Dhee - pie - yan");
-								System.out.println(recipient);
 								
 							EmailSender emailSender = new EmailSender(recipient);
 							
