@@ -117,9 +117,6 @@ public class EmailSender {
 		
 		DataSource source = new FileDataSource(path_LifeGuide);
 			
-			System.out.println(" Kah -  Lah");
-			System.out.print(recipient);
-			System.out.println(" OOO BOOON TOO");
 		
 			// Message Headers
 			mMessage.setFrom(Props.email);
