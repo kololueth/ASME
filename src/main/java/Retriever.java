@@ -29,12 +29,14 @@ public class Retriever{
 	private String smtpHostTag = "smtp_host";
 	private String portTag = "port";
 	private String companyDomainTag = "company_domain";
+	
+	private String fileName = "asme_config.xml";
 		
 	
 
 	public void writeConfig() {
 		
-		File configuration = new File("config.xml");
+		File configuration = new File(fileName);
 		
 
 			try {
@@ -70,6 +72,8 @@ public class Retriever{
 				DOMSource domSource = new DOMSource(doc);
 				StreamResult streamResult = new StreamResult(configuration);
 				transformer.transform(domSource, streamResult);
+				
+				
 	
 			
 			} catch (ParserConfigurationException e) {
@@ -91,6 +95,9 @@ public class Retriever{
 	    		e.printStackTrace();
 	    		
 			}  // End of catch blocks
+			
+			
+			readConfig();
 		
 	//  configure.setReadOnly();
 	
@@ -103,7 +110,7 @@ public class Retriever{
 	public void readConfig() {
 		
 		
-		File configuration = new File("config.xml");
+		File configuration = new File(fileName);
 		
 	
 				
@@ -121,16 +128,10 @@ public class Retriever{
 				Props.companyDomain = doc.getElementsByTagName(companyDomainTag).item(0).getTextContent();
 				
 				Props.root = Props.appParent + "/" + Props.projectName; // Use for testing on development computer
-			    
-		    	
-				 System.out.println("Parent Directory: " + Props.appParent + ";");
-				 System.out.println("Email: " + Props.email + ";");
-				 System.out.println("Password: " + Props.password + ";");
-				 System.out.println("SMTPHost: " + Props.smtpHost + ";");
-				 System.out.println("SMTPPort: " + Props.smtpPort + ";");
-				 System.out.println("Company Domain: " + Props.companyDomain + ";");
-				 System.out.println("Root: " + Props.root + ";");
-				 
+				
+				
+				System.out.println(Props.appParent + Props.email + Props.companyDomain);
+			    	 
 				 
 			} catch (SAXException e) {
 				
@@ -138,6 +139,10 @@ public class Retriever{
 				e.printStackTrace();
 				
 			} catch (IOException e) {
+				
+				System.out.println("No Config");
+				
+				writeConfig();
 				
 				e.printStackTrace();
 				
