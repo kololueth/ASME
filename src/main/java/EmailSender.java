@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.Date;
 import java.util.Properties;
 
@@ -24,31 +25,67 @@ public class EmailSender {
 
 	String sender;
 	String recipient;
-	
 	String path_LifeGuide;
 	
 	JSONObject errorJSON;
+	
+	boolean propertiesSet;
 	
 	
 
 	public EmailSender(String recipient) {
 		
-		this.recipient = recipient;
-
-		/////////////////////////////////////////////////
-		// Paths for attachments
-		/////////////////////////////////////////////////
-		
-		path_LifeGuide = Props.root + "/src/main/webapp/WEB-INF/98401 ASME Life Decision Download.pdf";
-	
-		// Mail Session
-		this.session = createSession();
-		session.setDebug(true);
-		
 		// Error Bank
+		
+		this.recipient = recipient;
+		
 		errorJSON = new JSONObject();
 		
+		propertiesSet = checkProperties();
+		
+		
+		if(propertiesSet) {
+			
+			/////////////////////////////////////////////////
+			// Paths for attachments
+			/////////////////////////////////////////////////
+			path_LifeGuide = Props.root + "/src/main/webapp/WEB-INF/98401 ASME Life Decision Download.pdf";
+			
+			// Mail Session
+			this.session = createSession();
+			session.setDebug(true);
+			
+			
+		} else {
+			
+			errorJSON.put("email", recipient);
+			errorJSON.put("status", "error"); // notifies application how to respond to the response.  
+			errorJSON.put("status_message", "Properties not set");
+			
+		}
+
+
+		
 	} // End of Constructor
+	
+	
+	private boolean checkProperties() {
+		
+
+		boolean set = true;
+		
+		set = !Props.appParent.contains("ENTER"); System.out.println(set);
+		set = !Props.email.contains("ENTER"); System.out.println(set);
+		set = !Props.password.contains("ENTER"); System.out.println(set);
+		set = !Props.smtpHost.contains("ENTER"); System.out.println(set);
+		set = !Props.smtpPort.contains("ENTER"); System.out.println(set);
+		
+		System.out.println("Check configuration file here " + new File(Props.configPath).getAbsolutePath());
+
+		
+		return set;
+			
+	}
 	
 	
 	private Session createSession() {
@@ -84,28 +121,37 @@ public class EmailSender {
 	
 	public boolean sendMessage() {
 		
+		if(propertiesSet) {
 		
-		MimeMessage mMessage = new MimeMessage(session);
 		
-		
-			try {
-				
-				buildMessage(mMessage);
-				
-				Transport.send(mMessage);
-				
-				return true;
-				
-				
-			} catch (MessagingException e) {
+			MimeMessage mMessage = new MimeMessage(session);
 			
-				errorJSON.put("email", recipient);
-				errorJSON.put("status", "error"); // notifies application how to respond to the response.  
-				errorJSON.put("status_message", e.toString());
 			
-				return false;
+				try {
+					
 				
-			} // End of try/catch
+					buildMessage(mMessage);
+					
+					Transport.send(mMessage);
+					
+					return true;
+					
+					
+				} catch (MessagingException e) {
+				
+					errorJSON.put("email", recipient);
+					errorJSON.put("status", "error"); // notifies application how to respond to the response.  
+					errorJSON.put("status_message", e.toString());
+				
+					return false;
+					
+				} // End of try/catch
+				
+			
+		} // End of if
+			
+			
+			return false;
 		
 		
 		

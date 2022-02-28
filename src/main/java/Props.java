@@ -11,6 +11,8 @@ public class Props {
 	static String smtpHost;
 	static String smtpPort;
 	static String companyDomain;
+	
+	static String configPath;
 
 	
 } // End of Class

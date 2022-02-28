@@ -29,14 +29,23 @@ public class Retriever{
 	private String smtpHostTag = "smtp_host";
 	private String portTag = "port";
 	private String companyDomainTag = "company_domain";
+	private String altConfig = "asme_config.xml";
 	
-	private String fileName = "asme_config.xml";
+	private int loopStopper = 0;
+	
 		
+	public Retriever() {
+		
+		Props.configPath = "/opt/apache-tomcat-10.0.6/webapps/ASME/asme_config.xml";
+		
+	} // End of Constructor
 	
-
+	
 	public void writeConfig() {
 		
-		File configuration = new File(fileName);
+		Props.configPath = altConfig;
+		
+		File configuration = new File(Props.configPath);
 		
 
 			try {
@@ -55,8 +64,14 @@ public class Retriever{
 				Element port = doc.createElement(portTag);
 				Element company_domain = doc.createElement(companyDomainTag);
 				
-	
-							
+				catalina.setTextContent("ENTER apache home directory here. example: /opt/apache-tomcat/webapps/PROJECT_NAME");
+				email.setTextContent("ENTER sending email address here");
+				password.setTextContent("ENTER senders password here");
+				smtp_host.setTextContent("ENTER email host here. example: smtp.mail.yahoo.com");
+				port.setTextContent("ENTER smtp host port number here");
+				company_domain.setTextContent("ENTER your domain name here");
+				
+			
 				doc.appendChild(root);
 				root.appendChild(company_domain);
 				root.appendChild(catalina);
@@ -64,8 +79,7 @@ public class Retriever{
 				root.appendChild(email);
 				root.appendChild(password);
 				root.appendChild(port);
-				
-				
+			
 								
 				TransformerFactory transformerFactory = TransformerFactory.newInstance();
 				Transformer transformer = transformerFactory.newTransformer();
@@ -74,46 +88,37 @@ public class Retriever{
 				transformer.transform(domSource, streamResult);
 				
 				
-	
-			
 			} catch (ParserConfigurationException e) {
 			
-	    		System.out.println(getClass().getName() + " - Error");
-	    		System.out.println(e.toString());
 	    		e.printStackTrace();
 			
 			} catch (TransformerConfigurationException e) {
 				
-	    		System.out.println(getClass().getName() + " - Error");
-	    		System.out.println(e.toString());
 	    		e.printStackTrace();
 				
 			} catch (TransformerException e) {
 				
-	    		System.out.println(getClass().getName() + " - Error");
-	    		System.out.println(e.toString());
 	    		e.printStackTrace();
 	    		
 			}  // End of catch blocks
 			
 			
-			readConfig();
-		
-	//  configure.setReadOnly();
-	
-	
-	
-	
+			if(loopStopper < 1) {
+			
+				readConfig();
+			
+			}
+
+			loopStopper++;
 	
 	} // End of readConfig
 	
 	public void readConfig() {
 		
 		
-		File configuration = new File(fileName);
+		File configuration = new File(Props.configPath);
 		
-	
-				
+
 			try {
 				
 				
@@ -128,11 +133,7 @@ public class Retriever{
 				Props.companyDomain = doc.getElementsByTagName(companyDomainTag).item(0).getTextContent();
 				
 				Props.root = Props.appParent + "/" + Props.projectName; // Use for testing on development computer
-				
-				
-				System.out.println(Props.appParent + Props.email + Props.companyDomain);
-			    	 
-				 
+						    	 			 
 			} catch (SAXException e) {
 				
 				// TODO Auto-generated catch block
@@ -140,11 +141,10 @@ public class Retriever{
 				
 			} catch (IOException e) {
 				
-				System.out.println("No Config");
-				
+				// Make a pop window here 
 				writeConfig();
 				
-				e.printStackTrace();
+			//	e.printStackTrace();
 				
 			} catch(ParserConfigurationException e) {
 				
@@ -153,12 +153,8 @@ public class Retriever{
 			} // End of try/catch 	
 			
 			
-		
-			
 	} // End of readConfig
 	
 
 	
-	
-
 } // End of Class
