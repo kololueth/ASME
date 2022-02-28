@@ -41,16 +41,16 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ASMEServlet extends HttpServlet {
 	
 	/**
-	 * status - body_content_processing_error = Issue with converting HTTP request body content to a String. 
+	 * status - body_content_processing_error = Issue with converting HTTP request body content to a String 
 	 */
 	private static final long serialVersionUID = 1L;
 	
 	
 	public void init() throws ServletException {	
-	
+		
 		// Set App Variables    
 	    new Retriever().readConfig();
-	    		
+	    
 	} // End of init
 	
 	
